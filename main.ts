@@ -1,9 +1,10 @@
 basic.forever(function () {
-    for (let index = 0; index < 2; index++) {
-        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 10)
-        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 30)
-        maqueen.motorStop(maqueen.Motors.M1)
-    }
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 50)
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 200)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 200)
+    basic.pause(350)
+    maqueen.motorStop(maqueen.Motors.M2)
+    maqueen.motorStop(maqueen.Motors.M1)
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
+    basic.pause(500)
     maqueen.motorStop(maqueen.Motors.All)
 })
